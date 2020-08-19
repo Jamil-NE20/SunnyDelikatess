@@ -172,6 +172,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -340,6 +341,10 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -354,6 +359,24 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SunnyDelikatess.Core\SunnyDelikatess.Core.csproj">
+      <Project>{c743fe0d-d036-4860-88c6-8929eb53fd6b}</Project>
+      <Name>SunnyDelikatess.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SunnyDelikatess.DataAccess.InMemory\SunnyDelikatess.DataAccess.InMemory.csproj">
+      <Project>{2af13c13-6608-4eb5-a002-44f12205efc7}</Project>
+      <Name>SunnyDelikatess.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SunnyDelikatess.DataAccess.SQL\SunnyDelikatess.DataAccess.SQL.csproj">
+      <Project>{a450431d-83e3-4704-bce3-7b17e87146bc}</Project>
+      <Name>SunnyDelikatess.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SunnyDelikatess.Service\SunnyDelikatess.Service.csproj">
+      <Project>{71f9df5b-6585-4808-a53e-2daa0185745d}</Project>
+      <Name>SunnyDelikatess.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
