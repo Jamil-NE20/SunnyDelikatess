@@ -19,6 +19,7 @@
                 <ul class="nav navbar-nav mr-auto">
                     <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("Product", "Index", "ProductManager", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Categories", "Index", "ProductCategoryManager", null, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
                 </ul>
@@ -30,59 +31,59 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-
-        <!-- Start Footer  -->
-        <footer>
-            <div class="footer-main">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-12 col-sm-12">
-                            <div class="footer-link-contact">
-                                <h4>Contact Us</h4>
-                                <ul>
-                                    <li>
-                                        <p><i class="fas fa-map-marker-alt"></i>Address: Lövängsgatan 10 <br>111 45 Stockholm<br> Sweden </p>
-                                    </li>
-                                    <li>
-                                        <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+46(0)70 530 16 38">+46(0)70 530 16 38</a></p>
-                                    </li>
-                                    <li>
-                                        <p><i class="fas fa-envelope"></i>Email: <a href="mailto:muazzem74@yahoo.se">muazzem74@yahoo.se</a></p>
-                                    </li>
-                                </ul>
+       
+        
+           <!-- Start Footer  -->
+            <footer>
+                <div class="footer-main">
+                    <div class="container bg-light" style="padding: 20px;">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="footer-link-contact">
+                                    <h4>Contact Us</h4>
+                                    <ul>
+                                        <li>
+                                            <p><i class="fas fa-map-marker-alt"></i>Address: Lövängsgatan 10 <br>111 45 Stockholm<br> Sweden </p>
+                                        </li>
+                                        <li>
+                                            <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+46(0)70 530 16 38">+46(0)70 530 16 38</a></p>
+                                        </li>
+                                        <li>
+                                            <p><i class="fas fa-envelope"></i>Email: <a href="mailto:muazzem74@yahoo.se">muazzem74@yahoo.se</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12">
-                            <div class="footer-top-box">
-                                <h3>Business Time</h3>
-                                <ul class="list-time">
-                                    <li>Monday - Friday: 08.00am to 08.00pm</li>
-                                    <li>Saturday: 10.00am to 06.00pm</li>
-                                    <li>Sunday: 10.00am to 04.00pm</li>
-                                </ul>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="footer-top-box">
+                                    <h3>Business Time</h3>
+                                    <ul class="list-time">
+                                        <li>Monday - Friday: 08.00am to 08.00pm</li>
+                                        <li>Saturday: 10.00am to 06.00pm</li>
+                                        <li>Sunday: 10.00am to 04.00pm</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-lg-4 col-md-12 col-sm-12">
-                            <div class="footer-top-box">
-                                <h3>Find Us</h3>
-                                
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="footer-top-box">
+                                    <h3>Find Us</h3>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>   
-             </div>     
-        </footer>
-        <!-- End Footer  -->
+                </div>
 
-        <hr />
-            <p>&copy; @DateTime.Now.Year - Sunny Delikatess</p>
-        
+
+                <hr />
+                <p>&copy; @DateTime.Now.Year - Sunny Delikatess</p>
+            </footer>
+            <!-- End Footer  -->
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+   
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 </body>
 </html>
