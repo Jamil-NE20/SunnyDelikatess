@@ -1,4 +1,5 @@
-﻿using SunnyDelikatess.Core.Models;
+﻿using SunnyDelikatess.Core.Contracts;
+using SunnyDelikatess.Core.Models;
 using SunnyDelikatess.Core.ViewModels;
 using SunnyDelikatess.DataAccess.InMemory;
 using System;
@@ -12,12 +13,12 @@ namespace SunnyDelikatess.WebUI.Controllers
     public class ProductManagerController : Controller
     {
         // GET: ProductManager
-        InMemoryRepository<Product> context;
-        InMemoryRepository<ProductCategory> productCategories;
-        public ProductManagerController()
+        IRepository<Product> context;
+        IRepository<ProductCategory> productCategories;
+        public ProductManagerController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoryContext)
         {
-            context = new InMemoryRepository<Product>();
-            productCategories = new InMemoryRepository<ProductCategory>();
+            context = productContext;
+            productCategories = productCategoryContext;
         }
 
         public ActionResult Index()
